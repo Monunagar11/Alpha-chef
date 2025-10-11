@@ -40,20 +40,20 @@ function Header() {
 
     if (scrollPosition > 5) {
       headerTop.classList.add("hidden");
-      mainHeader.classList.add("bg-gray-900", "text-blue-400", "py-5");
+      mainHeader.classList.add("bg-neutral-800", "text-blue-400", "py-5");
     } else {
       // document.getElementById('my-header').classList.remove('scrolled');
       headerTop.classList.remove("hidden");
-      mainHeader.classList.remove("bg-gray-900", "text-blue-400", "py-5");
+      mainHeader.classList.remove("bg-neutral-800", "text-blue-400", "py-5");
     }
   }, [scrollPosition]); // This effect runs whenever scrollPosition changes
 
   return (
     <header className="w-full relative z-10">
-      <div>
+      <div className="fixed w-full">
         {/* header top */}
-        <div id="headerTop">
-          <div className="hidden md:flex justify-between gap-4 border-b-1 mx-3 px-1 py-3 border-amber-200">
+        <div id="headerTop" className="w-full h-fit text-white">
+          <div className="hidden md:flex justify-between bg-transparent gap-4 border-b-1  px-1 py-3 border-amber-200">
             <div className="w-2/4 flex justify-between items-center">
               <span>
                 <IoLocation className="inline text-center" />
@@ -79,22 +79,22 @@ function Header() {
         {/* main header */}
         <div
           id="mainHeader"
-          className="p-6 flex justify-between py-8 w-full fixed transition-all duration-500"
+          className="px-10 flex justify-between py-10 w-full h-fit transition-all duration-500"
         >
           <div className="w-1/2 md:w-1/5 text-xl md:3xl font-bold text-orange-300">
             Alpha-Chef
           </div>
-          <div className="md:hidden" onClick={handleMenu}>
+          <div className="text-3xl text-white md:hidden" onClick={handleMenu}>
             {!isOpen ? (
-              <GiHamburgerMenu className="toggleButton bg-amber-50" />
+              <GiHamburgerMenu />
             ) : (
-              <IoMdClose className="toggleButton bg-amber-50" />
+              <IoMdClose />
             )}
           </div>
 
           <div className="hidden md:w-4/5 md:block">
             <nav className="">
-              <ul className="hidden md:flex justify-evenly font-semibold uppercase *:hover:text-orange-300 ">
+              <ul className="hidden md:flex justify-evenly font-semibold text-white uppercase *:hover:text-orange-300 ">
                 <li>
                   <NavLink to="/">Home</NavLink>
                 </li>
@@ -123,7 +123,7 @@ function Header() {
             <>
               <div
                 id="sidebar"
-                className={`fixed top-0 left-0 z-10 h-full w-80 bg-black text-white p-6 transition-transform duration-700 ease-in-out ${
+                className={`fixed top-0 left-0 z-10 h-full w-80 bg-stone-800 text-white p-6 transition-transform duration-700 ease-in-out ${
                   isOpen ? "translate-x-0" : "-translate-x-full"
                 } md:hidden`}
               >
@@ -131,12 +131,17 @@ function Header() {
                   className=" flex justify-end text-white md:hidden"
                   onClick={handleMenu}
                 >
-                  {isOpen && <IoMdClose className="toggleButton" />}
+                  {isOpen && <IoMdClose className="border text-2xl rounded-2xl" />}
+                </div>
+                
+                <div className="text-center mt-2 mb-5 text-3xl ">
+                Alpha-Chef
+
                 </div>
 
-                <nav className="h-full flex items-center">
-                  <ul className="flex flex-col justify-evenly gap-2 font-semibold text-white uppercase *:hover:text-orange-300 ">
-                    <li>
+                <nav className="h-full ">
+                  <ul className="flex flex-col justify-evenly gap-2 font-semibold text-white uppercase border-b-1 border-amber-100 *:hover:text-orange-300 *:border-t-1 *:border-amber-100 *:py-2">
+                    <li className="">
                       <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
