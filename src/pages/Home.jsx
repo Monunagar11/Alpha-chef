@@ -2,12 +2,18 @@ import { useState } from "react";
 
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { TiSocialTwitter } from "react-icons/ti";
+import { AiOutlinePlayCircle } from "react-icons/ai";
 
 import HeroImage1 from "../assets/images/main-slider/slider-1.jpg";
 import HeroImage2 from "../assets/images/main-slider/slider-2.jpg";
 import HeroImage3 from "../assets/images/main-slider/slider-3.jpg";
 import BookIcon1 from "../assets/images/resource/book-icon-1.png";
 import Pattern7 from "../assets/images/background/pattern-7.png";
+import Pattern10 from "../assets/images/background/pattern-10.svg";
 import offerImg1 from "../assets/images/resource/offer-image-1.jpg";
 import offerImg2 from "../assets/images/resource/offer-image-2.jpg";
 import offerImg3 from "../assets/images/resource/offer-image-3.jpg";
@@ -21,6 +27,7 @@ import ImageSection3 from "../assets/images/background/image-1.jpg";
 import Team1 from "../assets/images/resource/team-1.jpg";
 import Team2 from "../assets/images/resource/team-2.jpg";
 import Team3 from "../assets/images/resource/team-3.jpg";
+import BackgroundImg1 from "../assets/images/background/image-3.jpg";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,8 +73,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center h-full gap-4 pt-30 m-auto">
-          <p className="text-sm uppercase text-amber-200 tracking-[4px] mb-10">
+        <div className="flex flex-col justify-center items-center h-full gap-4 pt-10 md:pt-30 m-auto">
+          <p className="text-sm uppercase text-amber-200 tracking-[4px] mb-2 md:mb-10">
             Amazing & Delicious
           </p>
           <h1 className="text-2xl md:text-5xl text-white text-center font-sans">
@@ -82,7 +89,7 @@ function Home() {
         </div>
 
         <div
-          className="h-24 w-24 border-1 border-amber-100 animate-spin absolute bottom-8 right-8"
+          className="h-24 w-24 border-1 border-amber-100 animate-spin absolute bottom-5 right-8"
           style={{ animationDuration: "20s" }}
         ></div>
         <div className="h-24 w-24 absolute bottom-8 right-8 bg-amber-100 items-center flex flex-col text-center p-2">
@@ -175,10 +182,16 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block absolute -bottom-20 left-0 overflow-hidden animate-bounce">
+          <div
+            className="hidden md:block absolute -bottom-20 left-0 overflow-hidden animate-bounce"
+            style={{ animationDuration: "20s" }}
+          >
             <img src={Bg1} alt="bg1" srcset="" className="" />
           </div>
-          <div className="hidden md:block absolute top-20 right-0  animate-bounce ">
+          <div
+            className="hidden md:block absolute top-20 right-0  animate-bounce "
+            style={{ animationDuration: "20s" }}
+          >
             <img src={Bg2} alt="bg2" className="" />
           </div>
         </div>
@@ -221,9 +234,14 @@ function Home() {
                       <div className="relative">
                         <div
                           className="absolute"
-                          style={{ backgroundImage: `url(${Badge2})` }}
+                          // style={{ backgroundImage: `url(${Badge2})` }}
                         >
-                          <img src={Badge2} alt="" className=" rotate-45 " />
+                          <img
+                            src={Badge2}
+                            alt=""
+                            className=" animate-spin "
+                            style={{ animationDuration: "20s" }}
+                          />
                         </div>
                         <div className="">
                           <img src={Badge1} alt="" className="" />
@@ -264,7 +282,7 @@ function Home() {
               className="h-200 w-full object-cover"
             />
           </div>
-          <div className="h-120 lg:200 w-full lg:w-1/2">
+          <div className="h-fit lg:h-200 w-full lg:w-1/2">
             <div className=" px-18 pb-18 pt-5">
               <div className=" max-w-120 text-white">
                 <p className="text-amber-100 mb-4 uppercase">Special Dish</p>
@@ -296,6 +314,51 @@ function Home() {
         </div>
       </section>
 
+      {/* watch our video section */}
+      <section className="w-full h-fit relative">
+        <div
+          className="absolute top-0 left-0 -z-10 h-full w-full object-cover bg-center bg-cover bg-fixed bg-blend-multiply"
+          style={{ backgroundImage: `url(${BackgroundImg1})` }}
+        >
+          <div className="bg-black opacity-10 w-full h-full"></div>
+        </div>
+        <div className="m-auto py-16 md:px-20 w-full">
+          <div className="flex justify-center items-center flex-col mx-5 w-fit  text-white">
+            <div className="text-center max-w-120">
+              <p className="text-amber-100 uppercase mb-4">
+                Amazing Experience
+              </p>
+
+              <h2 className="capitalize text-4xl mb-4">Watch Our Video</h2>
+            </div>
+
+            <div className="grid place-items-center">
+              <AiOutlinePlayCircle
+                className="text-8xl text-white rounded-full shadow-2xs hover:shadow-neutral-300 hover:shadow-2xl
+                   transition-all duration-500"
+              />
+            </div>
+            <p className="text-3xl mx-5 md:text-4xl text-center mb-9 text-wrap md:mx-20">
+              A modern restaurant with a menu that will make your mouth water.
+            </p>
+            <p className="text-amber-100 uppercase mb-4 text-center">
+              Willium Joe - Master chef
+            </p>
+            <div className="m-auto px-5  h-3 w-full" style={{ backgroundImage: `url(${Pattern10})` }}>
+            </div>
+            <div className="w-full"> 
+              <ul className="flex flex-col sm:flex-row justify-center items-center flex-wrap">
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">51+ </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">32+</li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">85+</li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">10+</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* chef section */}
       <section className="w-full h-full bg-neutral-700">
         <div className="py-8 md:px-12 ">
@@ -311,41 +374,68 @@ function Home() {
           </div>
           <div className="flex w-full justify-evenly items-center flex-wrap  gap-5">
             <div className="w-72 my-4 group">
-              <div
-                className="mb-4 relative group  ">
-                <img src={Team1} alt="" srcset="" className="object-cover " />
-                <div className="absolute top-0 left-0 h-full w-5 bg-amber-300 group-hover:w-full opacity-50 transition-all duration-500">
-
+              <div className="mb-4 relative group  ">
+                <img src={Team1} alt="" srcset="" className="object-cover" />
+                <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
+                  <div className="flex relative justify-evenly items-center h-full">
+                    <FaFacebookF className="" />
+                    <FaLinkedinIn />
+                    <FaInstagram />
+                    <TiSocialTwitter />
+                  </div>
                 </div>
               </div>
-              <h2 className="text-4xl">Willium Joe</h2>
+              <h2 className="text-4xl text-white">Willium Joe</h2>
               <p className="text-amber-100 ">Master Chef</p>
-              <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia.
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officia.
               </p>
             </div>
 
             <div className="w-72 my-4">
-              <div className=" mb-4 group-hover:rotate-y-180 transition duration-500">
+              <div className=" mb-4 relative group">
                 <img src={Team2} alt="" srcset="" className="object-cover" />
+                <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
+                  <div className="flex relative justify-evenly items-center h-full">
+                    <FaFacebookF className="" />
+                    <FaLinkedinIn />
+                    <FaInstagram />
+                    <TiSocialTwitter />
+                  </div>
+                </div>
               </div>
-              <h2 className="text-4xl">Willium Joe</h2>
+              <h2 className="text-4xl text-white">Steave Den</h2>
               <p className="text-amber-100 ">Master Chef</p>
-              <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia.
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officia.
               </p>
             </div>
 
             <div className="w-72 my-4">
-              <div className=" mb-4  group-hover:rotate-y-180 transition duration-500">
+              <div className=" mb-4  relative group">
                 <img src={Team3} alt="" srcset="" className="object-cover" />
+                <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
+                  <div className="flex relative justify-evenly items-center h-full">
+                    <FaFacebookF className="" />
+                    <FaLinkedinIn />
+                    <FaInstagram />
+                    <TiSocialTwitter />
+                  </div>
+                </div>
               </div>
-              <h2 className="text-4xl">Willium Joe</h2>
+              <h2 className="text-4xl text-white">Lily Sofy</h2>
               <p className="text-amber-100 ">Master Chef</p>
-              <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia.
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officia.
               </p>
             </div>
           </div>
         </div>
       </section>
+
     </>
   );
 }
