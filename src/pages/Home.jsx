@@ -6,7 +6,7 @@ import { GrNext } from "react-icons/gr";
 import HeroImage1 from "../assets/images/main-slider/slider-1.jpg";
 import HeroImage2 from "../assets/images/main-slider/slider-2.jpg";
 import HeroImage3 from "../assets/images/main-slider/slider-3.jpg";
-import BookIcon1 from "../assets/images/resource/Book-icon-1.png";
+import BookIcon1 from "../assets/images/resource/book-icon-1.png";
 import Pattern7 from "../assets/images/background/pattern-7.png";
 import offerImg1 from "../assets/images/resource/offer-image-1.jpg";
 import offerImg2 from "../assets/images/resource/offer-image-2.jpg";
