@@ -404,8 +404,8 @@ function Home() {
                   <div className="m-4">
                     <h2 className="text-2xl xl:text-xl text-amber-200">Hygienic Food</h2>
                   </div>
-                  <div className="m-4 text-gray-400">
-                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                  <div className="m-4 text-gray-400 w-full text-sm">
+                    <p className="">Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
 
                 </div>
@@ -422,7 +422,7 @@ function Home() {
                   <div className="m-4">
                     <h2 className="text-2xl xl:text-xl text-amber-200">Fresh Environment</h2>
                   </div>
-                  <div className="m-4 text-gray-400">
+                  <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
 
@@ -440,7 +440,7 @@ function Home() {
                   <div className="m-4">
                     <h2 className="text-2xl xl:text-xl text-amber-200">Skilled Chefs</h2>
                   </div>
-                  <div className="m-4 text-gray-400">
+                  <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
 
@@ -458,7 +458,7 @@ function Home() {
                   <div className="m-4">
                     <h2 className="text-2xl xl:text-xl text-amber-200">Event & Party</h2>
                   </div>
-                  <div className="m-4 text-gray-400">
+                  <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
 
