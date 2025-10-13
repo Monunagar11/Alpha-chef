@@ -50,7 +50,7 @@ function Header() {
 
   return (
     <header className="w-lvw relative z-10">
-      <div className="fixed w-screen">
+      <div className="fixed w-full">
         {/* header top */}
         <div id="headerTop" className="w-full h-fit text-white">
           <div className="hidden md:flex justify-between bg-transparent gap-4 border-b-1  px-1 py-3 border-amber-200">

@@ -28,6 +28,9 @@ import Team1 from "../assets/images/resource/team-1.jpg";
 import Team2 from "../assets/images/resource/team-2.jpg";
 import Team3 from "../assets/images/resource/team-3.jpg";
 import BackgroundImg1 from "../assets/images/background/image-3.jpg";
+import News1 from "../assets/images/resource/news-1.jpg";
+import News2 from "../assets/images/resource/news-2.jpg";
+import News3 from "../assets/images/resource/news-3.jpg";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +105,7 @@ function Home() {
       <div className="bg-black relative w-full overflow-hidden">
         <div className="py-8 md:px-12 my-10">
           <div className="flex justify-center">
-            <div className="flex w-150 flex-col text-center gap-6  my-10 mx-4">
+            <div className="flex w-150 flex-col text-center gap-6  my-10">
               <p className="text-sm font-semibold uppercase text-amber-200 tracking-[4px] mb-10">
                 Flavors For Royalty
               </p>
@@ -200,7 +203,7 @@ function Home() {
       <section className="w-full ">
         <div className="pt-28 pb-32 px-2 bg-neutral-900 ">
           <div className="m-auto">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-20 mx-5 text-white">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-20 text-white">
               <div className="text-center max-w-120">
                 <p className="text-amber-100 mb-4">Our Story</p>
 
@@ -323,7 +326,7 @@ function Home() {
           <div className="bg-black opacity-10 w-full h-full"></div>
         </div>
         <div className="m-auto py-16 md:px-20 w-full">
-          <div className="flex justify-center items-center flex-col mx-5 w-fit  text-white">
+          <div className="flex justify-center items-center flex-col  w-fit  text-white">
             <div className="text-center max-w-120">
               <p className="text-amber-100 uppercase mb-4">
                 Amazing Experience
@@ -338,21 +341,30 @@ function Home() {
                    transition-all duration-500"
               />
             </div>
-            <p className="text-3xl mx-5 md:text-4xl text-center mb-9 text-wrap md:mx-20">
+            <p className="text-3xl md:text-4xl text-center mb-9 text-wrap md:mx-20">
               A modern restaurant with a menu that will make your mouth water.
             </p>
             <p className="text-amber-100 uppercase mb-4 text-center">
               Willium Joe - Master chef
             </p>
-            <div className="m-auto px-5  h-3 w-full" style={{ backgroundImage: `url(${Pattern10})` }}>
-            </div>
-            <div className="w-full"> 
+            <div
+              className="m-auto px-5  h-3 w-full"
+              style={{ backgroundImage: `url(${Pattern10})` }}
+            ></div>
+            <div className="w-full">
               <ul className="flex flex-col sm:flex-row justify-center items-center flex-wrap">
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">51+ </li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">32+</li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">85+</li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">10+</li>
-                
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  51+{" "}
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  32+
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  85+
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  10+
+                </li>
               </ul>
             </div>
           </div>
@@ -363,7 +375,7 @@ function Home() {
       <section className="w-full h-full bg-neutral-700">
         <div className="py-8 md:px-12 ">
           <div className="flex justify-center">
-            <div className="flex w-150 flex-col text-center gap-6  my-10 mx-4">
+            <div className="flex w-150 flex-col text-center gap-6  my-10 ">
               <p className="text-sm font-semibold uppercase text-amber-200 tracking-[4px] mb-10">
                 experienced team
               </p>
@@ -372,10 +384,15 @@ function Home() {
               </h1>
             </div>
           </div>
-          <div className="flex w-full justify-evenly items-center flex-wrap  gap-5">
-            <div className="w-72 my-4 group">
-              <div className="mb-4 relative group  ">
-                <img src={Team1} alt="" srcset="" className="object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center text-center gap-5">
+            <div className="w-full my-4 px-5 group">
+              <div className="mb-4  relative group  ">
+                <img
+                  src={Team1}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full"
+                />
                 <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
                   <div className="flex relative justify-evenly items-center h-full">
                     <FaFacebookF className="" />
@@ -393,9 +410,14 @@ function Home() {
               </p>
             </div>
 
-            <div className="w-72 my-4">
+            <div className="w-full my-4 px-5 group">
               <div className=" mb-4 relative group">
-                <img src={Team2} alt="" srcset="" className="object-cover" />
+                <img
+                  src={Team2}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full"
+                />
                 <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
                   <div className="flex relative justify-evenly items-center h-full">
                     <FaFacebookF className="" />
@@ -413,9 +435,14 @@ function Home() {
               </p>
             </div>
 
-            <div className="w-72 my-4">
+            <div className="w-full my-4 px-5 group">
               <div className=" mb-4  relative group">
-                <img src={Team3} alt="" srcset="" className="object-cover" />
+                <img
+                  src={Team3}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full"
+                />
                 <div className="absolute top-0 left-0 h-full w-full origin-left rotate-y-90 bg-gray-400 group-hover:rotate-y-0 opacity-60 transition-all duration-500">
                   <div className="flex relative justify-evenly items-center h-full">
                     <FaFacebookF className="" />
@@ -436,6 +463,95 @@ function Home() {
         </div>
       </section>
 
+      {/* recent updated event */}
+      <section>
+        <div className="m-auto py-16  w-full bg-neutral-900">
+          <div className="flex justify-center items-center flex-col w-full  text-white">
+            <div className="text-center w-full">
+              <p className="text-amber-100 uppercase mb-4">Recent Updates</p>
+
+              <h2 className="capitalize text-4xl mb-4">Upcoming Events</h2>
+            </div>
+          </div>
+          {/* <div className="columns-1 w-full md:columns-2 lg:columns-3 grid justify-evenly grid-cols-1 md:grid-cols-2 items-center overflow-hidden" > */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center text-center gap-5">
+            <div className="w-full my-4 px-5 group ">
+              <div className=" mb-4 h-full relative overflow-hidden">
+                <img
+                  src={News1}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full transition-all duration-300 group-hover:scale-105"
+                />
+                <p className="absolute top-5 left-5 bg-black text-white px-1">
+                  05/10/2025
+                </p>
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                  <div className="text-left h-full">
+                    <p className="text-amber-100 uppercase">Recipe</p>
+                    <h4 className="text-2xl text-white">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h4>
+                  </div>
+                </div>
+
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+              </div>
+            </div>
+
+            <div className="w-full my-4 px-5 group">
+              <div className=" mb-4  relative overflow-hidden">
+                <img
+                  src={News2}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full transition-all duration-300 group-hover:scale-105"
+                />
+                <p className="absolute top-5 left-5 bg-black text-white px-1">
+                  05/10/2025
+                </p>
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                  <div className="text-left h-full">
+                    <p className="text-amber-100 uppercase">Recipe</p>
+                    <h4 className="text-2xl text-white">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h4>
+                  </div>
+                </div>
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+              </div>
+            </div>
+
+            <div className="w-full my-4 px-5 group">
+              <div className=" mb-4  relative overflow-hidden">
+                <img
+                  src={News3}
+                  alt=""
+                  srcset=""
+                  className="object-cover w-full transition-all duration-300 group-hover:scale-105"
+                />
+                <p className="absolute top-5 left-5 bg-black text-white px-1">
+                  05/10/2025
+                </p>
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                  <div className="text-left h-full">
+                    <p className="text-amber-100 uppercase">Recipe</p>
+                    <h4 className="text-2xl text-white">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h4>
+                  </div>
+                </div>
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center items-center">
+            <button className="border-2 border-amber-100 bg-amber-100 py-4 px-12">
+              view our Blog{" "}
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
