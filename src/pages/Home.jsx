@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
@@ -28,15 +28,48 @@ import Team1 from "../assets/images/resource/team-1.jpg";
 import Team2 from "../assets/images/resource/team-2.jpg";
 import Team3 from "../assets/images/resource/team-3.jpg";
 import BackgroundImg1 from "../assets/images/background/image-3.jpg";
+import TestimonialBg from "../assets/images/background/image-2.jpg";
 import News1 from "../assets/images/resource/news-1.jpg";
 import News2 from "../assets/images/resource/news-2.jpg";
 import News3 from "../assets/images/resource/news-3.jpg";
+import WhyIcon1 from "../assets/images/resource/why-icon-1.png";
+import WhyIcon2 from "../assets/images/resource/why-icon-2.png";
+import WhyIcon3 from "../assets/images/resource/why-icon-3.png";
+import WhyIcon4 from "../assets/images/resource/why-icon-4.png";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setIndex] = useState(0);
 
   const images = [HeroImage1, HeroImage2, HeroImage3];
+  const quotes = [
+    "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.",
+    "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary1.",
+    "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary2.",
+  ];
+
+  //   useEffect(() => {
+  // 8    setTimeout(
+  // 9      () =>
+  // 10        currentIndex((prevIndex) =>
+  // 11          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+  // 12        ),
+  // 13      2500
+  // 14    );
+  // 15
+  // 16    return () => {};
+  // 17  }, [index]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      currentIndex((pre) => {
+        pre === quotes.length - 1 ? 0 : pre - 1;
+      }),
+        2500;
+    });
+
+    return () => {};
+  }, [currentIndex]);
 
   const handleToggel = () => {
     setIsOpen(!isOpen);
@@ -56,7 +89,8 @@ function Home() {
 
   return (
     <>
-      <div className="w-full h-lvh relative">
+      {/* Hero Section */}
+      <section className="w-full h-lvh relative">
         <div
           className="absolute -z-10 inset-0 bg-cover bg-center transition-opacity duration-500"
           style={{ backgroundImage: `url(${images[currentIndex]})` }}
@@ -99,10 +133,10 @@ function Home() {
           <img src={BookIcon1} alt="Book-icon" srcset="" className="mb-1" />
           <p className="font-extralight leading-none ">Book a table</p>
         </div>
-      </div>
+      </section>
 
       {/* Flovour for royalty section */}
-      <div className="bg-black relative w-full overflow-hidden">
+      <section className="bg-black relative w-full overflow-hidden">
         <div className="py-8 md:px-12 my-10">
           <div className="flex justify-center">
             <div className="flex w-150 flex-col text-center gap-6  my-10">
@@ -198,8 +232,9 @@ function Home() {
             <img src={Bg2} alt="bg2" className="" />
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* our story section */}
       <section className="w-full ">
         <div className="pt-28 pb-32 px-2 bg-neutral-900 ">
           <div className="m-auto">
@@ -276,6 +311,7 @@ function Home() {
         </div>
       </section>
 
+      {/* Special dishes section */}
       <section className="w-full h-full bg-neutral-900">
         <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
           <div className="h-200 w-full lg:w-1/2">
@@ -317,58 +353,124 @@ function Home() {
         </div>
       </section>
 
-      {/* watch our video section */}
-      <section className="w-full h-fit relative">
-        <div
-          className="absolute top-0 left-0 -z-10 h-full w-full object-cover bg-center bg-cover bg-fixed bg-blend-multiply"
-          style={{ backgroundImage: `url(${BackgroundImg1})` }}
-        >
-          <div className="bg-black opacity-10 w-full h-full"></div>
-        </div>
-        <div className="m-auto py-16 md:px-20 w-full">
-          <div className="flex justify-center items-center flex-col  w-fit  text-white">
-            <div className="text-center max-w-120">
-              <p className="text-amber-100 uppercase mb-4">
-                Amazing Experience
-              </p>
+      {/* Special offer */}
+      <section className="w-full h-fit bg-neutral-900">
+        <div className="m-auto py-16 px-16 w-full bg-neutral-900">
+          <div className="flex justify-center items-center flex-col w-full  text-white">
+            <div className="text-center w-full">
+              <p className="text-amber-100 uppercase mb-4">Special Offer</p>
 
-              <h2 className="capitalize text-4xl mb-4">Watch Our Video</h2>
-            </div>
-
-            <div className="grid place-items-center">
-              <AiOutlinePlayCircle
-                className="text-8xl text-white rounded-full shadow-2xs hover:shadow-neutral-300 hover:shadow-2xl
-                   transition-all duration-500"
-              />
-            </div>
-            <p className="text-3xl md:text-4xl text-center mb-9 text-wrap md:mx-20">
-              A modern restaurant with a menu that will make your mouth water.
-            </p>
-            <p className="text-amber-100 uppercase mb-4 text-center">
-              Willium Joe - Master chef
-            </p>
-            <div
-              className="m-auto px-5  h-3 w-full"
-              style={{ backgroundImage: `url(${Pattern10})` }}
-            ></div>
-            <div className="w-full">
-              <ul className="flex flex-col sm:flex-row justify-center items-center flex-wrap">
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
-                  51+{" "}
-                </li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
-                  32+
-                </li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
-                  85+
-                </li>
-                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
-                  10+
-                </li>
-              </ul>
+              <h2 className="capitalize text-4xl mb-4">Best Specialties</h2>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Tesimonial section */} 
+      <section className="w-full h-lvh bg-neutral-950 relative">
+        <div
+          className="m-auto py-8 px-16 w-full h-full opacity-30 bg-cover bg-center"
+          style={{ backgroundImage: `url(${TestimonialBg})` }}
+        ></div>
+        <div className="px-4 absolute top-0 left-0 h-lvh w-full">
+          <div className="grid grid-cols-1 items-center justify-center h-full w-full overflow-hidden px-8 mx-4 ">
+            {quotes.map((quote, ind) => (
+              <div className="w-full overflow-hidden text-white text-center text-4xl">
+                {quote}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* why choose us */}
+      <section className="w-full h-fit bg-neutral-800">
+        <div className="py-12 px-4">
+          <div className=" mb-10 flex justify-center items-center flex-col w-full  text-white ">
+            <div className="text-center w-full">
+              <p className="text-amber-100 uppercase mb-4">Why Choose Us</p>
+
+              <h2 className="capitalize text-5xl mb-4">Our Strength</h2>
+            </div>
+          </div>
+          <div className="m-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-center">
+            
+            <div className="mb-10 px-5 mx-5 bg-neutral-900">
+              <div>
+                <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
+                  <div className="m-4">
+                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                  </div>
+                  <div className="m-4">
+                    <h2 className="text-2xl xl:text-xl text-amber-200">Hygienic Food</h2>
+                  </div>
+                  <div className="m-4 text-gray-400">
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div className="mb-10 px-5 mx-5 bg-neutral-900">
+              <div>
+                <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
+                  <div className="m-4">
+                      <img src={WhyIcon2} alt="Why choose us" className="text-amber-200"/>
+                  </div>
+                  <div className="m-4">
+                    <h2 className="text-2xl xl:text-xl text-amber-200">Fresh Environment</h2>
+                  </div>
+                  <div className="m-4 text-gray-400">
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div className="mb-10 px-5 mx-5 bg-neutral-900">
+              <div>
+                <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
+                  <div className="m-4">
+                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                  </div>
+                  <div className="m-4">
+                    <h2 className="text-2xl xl:text-xl text-amber-200">Skilled Chefs</h2>
+                  </div>
+                  <div className="m-4 text-gray-400">
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div className="mb-10 px-3 mx-5 bg-neutral-900">
+              <div>
+                <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
+                  <div className="m-4">
+                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                  </div>
+                  <div className="m-4">
+                    <h2 className="text-2xl xl:text-xl text-amber-200">Event & Party</h2>
+                  </div>
+                  <div className="m-4 text-gray-400">
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* chef section */}
@@ -463,9 +565,63 @@ function Home() {
         </div>
       </section>
 
+      {/* watch our video section */}
+      <section className="w-full h-fit relative">
+        <div
+          className="absolute top-0 left-0 -z-10 h-full w-full object-cover bg-center bg-cover bg-fixed bg-blend-multiply"
+          style={{ backgroundImage: `url(${BackgroundImg1})` }}
+        >
+          <div className="bg-black opacity-10 w-full h-full"></div>
+        </div>
+        <div className="m-auto py-16 md:px-20 w-full">
+          <div className="flex justify-center items-center flex-col  w-fit  text-white">
+            <div className="text-center max-w-120">
+              <p className="text-amber-100 uppercase mb-4">
+                Amazing Experience
+              </p>
+
+              <h2 className="capitalize text-4xl mb-4">Watch Our Video</h2>
+            </div>
+
+            <div className="grid place-items-center">
+              <AiOutlinePlayCircle
+                className="text-8xl text-white rounded-full shadow-2xs hover:shadow-neutral-300 hover:shadow-2xl
+                   transition-all duration-500"
+              />
+            </div>
+            <p className="text-3xl md:text-4xl text-center mb-9 text-wrap md:mx-20">
+              A modern restaurant with a menu that will make your mouth water.
+            </p>
+            <p className="text-amber-100 uppercase mb-4 text-center">
+              Willium Joe - Master chef
+            </p>
+            <div
+              className="m-auto px-5  h-3 w-full"
+              style={{ backgroundImage: `url(${Pattern10})` }}
+            ></div>
+            <div className="w-full">
+              <ul className="flex flex-col sm:flex-row justify-center items-center flex-wrap">
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  51+{" "}
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  32+
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  85+
+                </li>
+                <li className="text-6xl text-center sm:text-left text-white w-full sm:w-1/2 md:w-1/4">
+                  10+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* recent updated event */}
       <section>
-        <div className="m-auto py-16  w-full bg-neutral-900">
+        <div className="m-auto py-16 px-16 w-full bg-neutral-900">
           <div className="flex justify-center items-center flex-col w-full  text-white">
             <div className="text-center w-full">
               <p className="text-amber-100 uppercase mb-4">Recent Updates</p>
@@ -474,28 +630,28 @@ function Home() {
             </div>
           </div>
           {/* <div className="columns-1 w-full md:columns-2 lg:columns-3 grid justify-evenly grid-cols-1 md:grid-cols-2 items-center overflow-hidden" > */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center text-center gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center text-center gap-5 ">
             <div className="w-full my-4 px-5 group ">
               <div className=" mb-4 h-full relative overflow-hidden">
                 <img
                   src={News1}
                   alt=""
                   srcset=""
-                  className="object-cover w-full transition-all duration-300 group-hover:scale-105"
+                  className="object-cover w-full transition-all duration-700 group-hover:scale-105"
                 />
                 <p className="absolute top-5 left-5 bg-black text-white px-1">
                   05/10/2025
                 </p>
-                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left brightness-90">
                   <div className="text-left h-full">
-                    <p className="text-amber-100 uppercase">Recipe</p>
+                    <p className="text-amber-100 uppercase">Food, Flavour</p>
                     <h4 className="text-2xl text-white">
                       Flavour so good you’ll try to eat with your eyes.
                     </h4>
                   </div>
                 </div>
 
-                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-1000"></div>
               </div>
             </div>
 
@@ -510,15 +666,15 @@ function Home() {
                 <p className="absolute top-5 left-5 bg-black text-white px-1">
                   05/10/2025
                 </p>
-                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left brightness-90">
                   <div className="text-left h-full">
-                    <p className="text-amber-100 uppercase">Recipe</p>
+                    <p className="text-amber-100 uppercase">Healthy Food</p>
                     <h4 className="text-2xl text-white">
                       Flavour so good you’ll try to eat with your eyes.
                     </h4>
                   </div>
                 </div>
-                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-1000"></div>
               </div>
             </div>
 
@@ -533,15 +689,15 @@ function Home() {
                 <p className="absolute top-5 left-5 bg-black text-white px-1">
                   05/10/2025
                 </p>
-                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left  ">
+                <div className="absolute bottom-0 left-0 h-fit w-full p-5 origin-left brightness-90">
                   <div className="text-left h-full">
                     <p className="text-amber-100 uppercase">Recipe</p>
-                    <h4 className="text-2xl text-white">
+                    <h4 className="text-2xl text-white ">
                       Flavour so good you’ll try to eat with your eyes.
                     </h4>
                   </div>
                 </div>
-                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-500"></div>
+                <div className="absolute h-full w-[50%]  bg-gradient-to-r from-gray-300 to-gray-50  origin-top-left -skew-x-25 top-0 -left-[85%] opacity-50 group-hover:left-160 group-hover:opacity-10 transition-all duration-1000"></div>
               </div>
             </div>
           </div>
