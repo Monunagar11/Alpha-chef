@@ -12,6 +12,7 @@ import HeroImage1 from "../assets/images/main-slider/slider-1.jpg";
 import HeroImage2 from "../assets/images/main-slider/slider-2.jpg";
 import HeroImage3 from "../assets/images/main-slider/slider-3.jpg";
 import BookIcon1 from "../assets/images/resource/book-icon-1.png";
+import Pattern2 from "../assets/images/background/pattern-2.png";
 import Pattern7 from "../assets/images/background/pattern-7.png";
 import Pattern10 from "../assets/images/background/pattern-10.svg";
 import offerImg1 from "../assets/images/resource/offer-image-1.jpg";
@@ -48,28 +49,6 @@ function Home() {
     "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary2.",
   ];
 
-  //   useEffect(() => {
-  // 8    setTimeout(
-  // 9      () =>
-  // 10        currentIndex((prevIndex) =>
-  // 11          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-  // 12        ),
-  // 13      2500
-  // 14    );
-  // 15
-  // 16    return () => {};
-  // 17  }, [index]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      currentIndex((pre) => {
-        pre === quotes.length - 1 ? 0 : pre - 1;
-      }),
-        2500;
-    });
-
-    return () => {};
-  }, [currentIndex]);
 
   const handleToggel = () => {
     setIsOpen(!isOpen);
@@ -366,19 +345,162 @@ function Home() {
         </div>
       </section>
 
-      {/* Tesimonial section */} 
+      {/* Tesimonial section */}
       <section className="w-full h-lvh bg-neutral-950 relative">
         <div
           className="m-auto py-8 px-16 w-full h-full opacity-30 bg-cover bg-center"
           style={{ backgroundImage: `url(${TestimonialBg})` }}
         ></div>
         <div className="px-4 absolute top-0 left-0 h-lvh w-full">
-          <div className="grid grid-cols-1 items-center justify-center h-full w-full overflow-hidden px-8 mx-4 ">
-            {quotes.map((quote, ind) => (
-              <div className="w-full overflow-hidden text-white text-center text-4xl">
-                {quote}
+          <div className="mt-25">
+            <div className="grid grid-cols-1 items-center justify-center h-full w-full overflow-hidden px-8 mx-4 ">
+              <h2 className="text-white text-center text-6xl">''</h2>
+              <div className="w-full px-20 overflow-hidden text-white text-center text-4xl">
+                {quotes[0]}
               </div>
-            ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*Reservation Section  */}
+      <section className="h-full w-full relative bg-neutral-800">
+        <div className="mx-1 p-4 static -mt-70 ">
+          <div className="w-full relative bg-black">
+            <div className="flex justify-center w-full h-full items-center flex-wrap  text-white">
+              <div className="w-full lg:w-2/3 mx-auto p-10">
+                <div className="text-center text mb-10">
+                  <h1 className="text-5xl mb-4">Online Reservation</h1>
+                  <p>
+                    Booking request{" "}
+                    <span className="text-orange-200">+88-123-123456</span> or
+                    fill out the order form
+                  </p>
+                </div>
+                <div>
+                  <form>
+                    <div className="flex flex-col md:flex-row flex-wrap w-full">
+                      <div className="w-full md:w-1/2 px-2 mb-5">
+                        <div className=" bg-neutral-700 text-white">
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Your Name"
+                            className="px-5 py-2 w-full font-medium h-14 placeholder:text-white border-1 border-gray-400 focus:outline-2 focus:outline-amber-200"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/2 px-2 mb-5">
+                        <div className="  bg-neutral-700 text-white">
+                          <input
+                            type="Number"
+                            name=""
+                            id=""
+                            placeholder="Phone Number"
+                            className="px-5 py-2 w-full font-medium h-14 placeholder:text-white border-1 border-gray-400 focus:outline-2 focus:outline-amber-200"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-5">
+                        <div className="bg-neutral-700 text-white">
+                          <input
+                            type="number"
+                            name=""
+                            id=""
+                            placeholder="1 Person"
+                            className="px-5 py-2 w-full font-medium h-14 placeholder:text-white border-1 border-gray-400 focus:outline-2 focus:outline-amber-200"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-5">
+                        <div className="bg-neutral-700 text-white">
+                          <input
+                            type="date"
+                            name=""
+                            id=""
+                            placeholder="DD-MM-YYYY"
+                            className="px-5 py-2 w-full uppercase font-medium h-14 placeholder:text-white border-1 border-gray-400 focus:outline-2 focus:outline-amber-200"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="w-full lg:w-1/3 px-2 mb-5">
+                        <div className="bg-neutral-700 text-white">
+                          <input
+                            type="time"
+                            name=""
+                            id=""
+                            placeholder="10:10 AM"
+                            className="px-5 py-2 w-full font-medium border-1 border-gray-400 focus:outline-2 focus:outline-amber-200 h-14 placeholder:text-white"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="w-full h-fit px-2 mb-5">
+                        <div className="bg-neutral-700 text-white">
+                          <textarea
+                            name="Message"
+                            id=""
+                            rows="5"
+                            placeholder="Message"
+                            className="px-5 py-2 w-full font-medium placeholder:text-white border-1 border-gray-400 focus:outline-2 focus:outline-amber-200"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div className="w-full text-center text-black bg-orange-200 p-5">
+                        <button
+                          type="submit"
+                          className="font-semibold font-serif tracking-widest uppercase"
+                        >
+                          Book A Table
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div
+                className="w-full h-full lg:w-1/3 p-15 text-white text-center"
+                style={{ backgroundImage: `url(${Pattern2})` }}
+              >
+                <div className="mb-10 ">
+                  <h2 className="text-4xl text-white text-nowrap">
+                    Contact Us
+                  </h2>
+                </div>
+                <div className="w-full text-center">
+                  <div className="mb-5">
+                    <p>Booking Request</p>
+                    <h3 className="text-3xl text-amber-200 text-nowrap">
+                      +831234567890
+                    </h3>
+                  </div>
+
+                  <ul>
+                    <li className="mb-5">
+                      <strong>Location</strong>
+                      <br />
+                      Restaurant St, Delicious City, London 9578, UK
+                    </li>
+                    <li className="mb-5">
+                      <strong>Lunch Time</strong>
+                      <br />
+                      Monday to Sunday <br /> 11.00 am - 2.30pm
+                    </li>
+                    <li className="mb-5">
+                      <strong>Dinner Time</strong>
+                      <br />
+                      Monday to Sunday <br /> 05.00 pm - 10.00pm
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -394,83 +516,97 @@ function Home() {
             </div>
           </div>
           <div className="m-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-center">
-            
             <div className="mb-10 px-5 mx-5 bg-neutral-900">
               <div>
                 <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
                   <div className="m-4">
-                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                    <img
+                      src={WhyIcon1}
+                      alt="Why choose us"
+                      className="text-amber-200"
+                    />
                   </div>
                   <div className="m-4">
-                    <h2 className="text-2xl xl:text-xl text-amber-200">Hygienic Food</h2>
+                    <h2 className="text-2xl xl:text-xl text-amber-200">
+                      Hygienic Food
+                    </h2>
                   </div>
                   <div className="m-4 text-gray-400 w-full text-sm">
-                    <p className="">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                    <p className="">
+                      Lorem Ipsum is simply dummy printing and typesetting.
+                    </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
 
             <div className="mb-10 px-5 mx-5 bg-neutral-900">
               <div>
                 <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
                   <div className="m-4">
-                      <img src={WhyIcon2} alt="Why choose us" className="text-amber-200"/>
+                    <img
+                      src={WhyIcon2}
+                      alt="Why choose us"
+                      className="text-amber-200"
+                    />
                   </div>
                   <div className="m-4">
-                    <h2 className="text-2xl xl:text-xl text-amber-200">Fresh Environment</h2>
+                    <h2 className="text-2xl xl:text-xl text-amber-200">
+                      Fresh Environment
+                    </h2>
                   </div>
                   <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
-
                 </div>
               </div>
-
             </div>
 
             <div className="mb-10 px-5 mx-5 bg-neutral-900">
               <div>
                 <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
                   <div className="m-4">
-                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                    <img
+                      src={WhyIcon1}
+                      alt="Why choose us"
+                      className="text-amber-200"
+                    />
                   </div>
                   <div className="m-4">
-                    <h2 className="text-2xl xl:text-xl text-amber-200">Skilled Chefs</h2>
+                    <h2 className="text-2xl xl:text-xl text-amber-200">
+                      Skilled Chefs
+                    </h2>
                   </div>
                   <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
-
                 </div>
               </div>
-
             </div>
 
             <div className="mb-10 px-3 mx-5 bg-neutral-900">
               <div>
                 <div className="w-full h-fit text-center flex flex-col justify-center items-center p-4 m-auto ">
                   <div className="m-4">
-                      <img src={WhyIcon1} alt="Why choose us" className="text-amber-200"/>
+                    <img
+                      src={WhyIcon1}
+                      alt="Why choose us"
+                      className="text-amber-200"
+                    />
                   </div>
                   <div className="m-4">
-                    <h2 className="text-2xl xl:text-xl text-amber-200">Event & Party</h2>
+                    <h2 className="text-2xl xl:text-xl text-amber-200">
+                      Event & Party
+                    </h2>
                   </div>
                   <div className="m-4 text-gray-400 w-full text-sm">
                     <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* chef section */}
