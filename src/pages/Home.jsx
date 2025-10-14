@@ -37,6 +37,9 @@ import WhyIcon1 from "../assets/images/resource/why-icon-1.png";
 import WhyIcon2 from "../assets/images/resource/why-icon-2.png";
 import WhyIcon3 from "../assets/images/resource/why-icon-3.png";
 import WhyIcon4 from "../assets/images/resource/why-icon-4.png";
+import Featured1 from "../assets/images/resource/featured-1.jpg";
+import Featured2 from "../assets/images/resource/featured-2.jpg";
+import Featured3 from "../assets/images/resource/featured-3.jpg";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +51,6 @@ function Home() {
     "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary1.",
     "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary2.",
   ];
-
 
   const handleToggel = () => {
     setIsOpen(!isOpen);
@@ -606,6 +608,72 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Best menu */}
+      <section className="w-full h-fit">
+        <div className="p-0 m-auto">
+          <div>
+            <div className="grid text-white grid-cols-1 grid-rows-3 md:grid-flow-row h-fit md:h-lvh md:grid-cols-2 lg:grid-cols-3 text-center">
+              <div>
+                <div className="bg-black w-full h-full flex items-center text-center">
+                  <div className=" max-w-75 m-auto py-8">
+                    <div className="py-7 px-5 ">
+                      <div className="uppercase text-orange-200 text-sm font-semibold">Best Selected</div>
+                      <h1 className="text-2xl mb-2">Chef Choise</h1>
+                      <div className="text-sm text-gray-600 text-sm ">Dummy printing lorem Ipsum simply.</div>
+                      <div><button className="uppercase">
+                        view menu{" "}
+                        </button></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full h-full">
+                <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured3})` }}> </div>
+                </div>
+              </div>
+              
+              <div className=" row-span-2 ">
+                
+                <div className="w-full h-full relative">
+                <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured2})` }}> </div>
+                <div className="bg-black w-full flex items-end justify-center text-center">
+                  <div className=" max-w-75 m-auto py-8 absolute brightness-90">
+                    <div className="py-7 px-5 ">
+                      <div className="uppercase text-orange-200 text-sm font-semibold">Latest</div>
+                      <h1 className="text-2xl mb-2">Upcoming Events</h1>
+                      <div className="text-sm text-gray-600 text-sm ">Simply dummy printing and setting.</div>
+                      <div><button className="uppercase">
+                        Join Event{" "}
+                        </button></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+              
+              <div>
+                <div className="bg-black w-full h-full flex items-center text-center">
+                  <div className=" max-w-75 m-auto py-8">
+                    <div className="py-7 px-5 ">
+                      <div className="uppercase text-orange-200 text-sm font-semibold">Selected</div>
+                      <h1 className="text-2xl mb-2">Chef Choise</h1>
+                      <div className="text-sm text-gray-600 text-sm ">Dummy printing lorem Ipsum simply.</div>
+                      <div><button className="uppercase">
+                        view menu{" "}
+                        </button></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full h-full">
+                <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured3})` }}> </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
         </div>
       </section>
 

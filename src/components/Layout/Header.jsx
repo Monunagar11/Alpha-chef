@@ -49,7 +49,7 @@ function Header() {
   }, [scrollPosition]); // This effect runs whenever scrollPosition changes
 
   return (
-    <header className="w-lvw relative z-10">
+    <header className="w-lvw relative z-50">
       <div className="fixed w-full">
         {/* header top */}
         <div id="headerTop" className="w-full h-fit text-white">
