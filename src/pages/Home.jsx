@@ -612,11 +612,11 @@ function Home() {
       </section>
 
       {/* Best menu */}
-      <section className="w-full h-fit">
-        <div className="p-0 m-auto">
+      <section className="w-full h-full">
+        <div className=" m-auto">
           <div>
-            <div className="grid text-white grid-cols-1 grid-rows-3 md:grid-flow-row h-fit md:h-lvh md:grid-cols-2 lg:grid-cols-3 text-center">
-              <div>
+            <div className="text-white  flex flex-col md:flex-row flex-wrap text-center">
+              <div className="w-full md:w-1/2 lg:w-1/3 ">
                 <div className="bg-black w-full h-full flex items-center text-center">
                   <div className=" max-w-75 m-auto py-8">
                     <div className="py-7 px-5 ">
@@ -630,11 +630,11 @@ function Home() {
                   </div>
                 </div>
                 <div className="w-full h-full">
-                <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured3})` }}> </div>
+                <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured1})` }}> </div>
                 </div>
               </div>
               
-              <div className=" row-span-2 ">
+              <div className="w-full md:w-1/2 lg:w-1/3 ">
                 
                 <div className="w-full h-full relative">
                 <div className="object-cover bg-center h-full" style={{ backgroundImage: `url(${Featured2})` }}> </div>
@@ -653,7 +653,7 @@ function Home() {
                 </div>
               </div>
               
-              <div>
+              <div className="w-full md:w-1/2 lg:w-1/3">
                 <div className="bg-black w-full h-full flex items-center text-center">
                   <div className=" max-w-75 m-auto py-8">
                     <div className="py-7 px-5 ">
