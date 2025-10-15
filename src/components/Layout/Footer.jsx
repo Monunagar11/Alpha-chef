@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className='w-full h-fit '>
       <div className='relative h-full w-full pt-20 pb-15'>
-        <div className='absolute -z-10 inset-0 bg-cover top-0 left-0 bg-center' 
+        <div className='absolute -z-10 inset-0 bg-cover top-0 left-0 bg-center brightness-40' 
         // style={{ backgroundImage: `url(${FooterBg})`}}
         style={{ backgroundImage: `url(${FooterBg})` }}>
         </div>
