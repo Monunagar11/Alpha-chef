@@ -102,7 +102,7 @@ function Header() {
                   <NavLink to="/">Menus</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/">About us</NavLink>
+                  <NavLink to="/about">About us</NavLink>
                 </li>
                 <li>
                   <NavLink to="/">Our Chef</NavLink>
@@ -148,7 +148,7 @@ function Header() {
                       <NavLink to="/">Menus</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/">About us</NavLink>
+                      <NavLink to="/about">About us</NavLink>
                     </li>
                     <li>
                       <NavLink to="/">Our Chef</NavLink>
