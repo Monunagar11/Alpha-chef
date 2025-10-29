@@ -31,9 +31,28 @@ function index() {
           className="absolute -z-10 inset-0 bg-cover top-0 left-0 bg-center brightness-40"
           style={{ backgroundImage: `url(${Banner1})` }}
         ></div>
-        <div className="m-0 pt-100">
-          <div className="text-white"></div>
-        </div>
+        <div className="py-40 flex flex-col lg:flex-row justify-center items-center">
+            <div className="h-full w-full lg:w-1/2 flex items-center justify-center text-center">
+              <div className="px-5 md:px-18 pt-5">
+                <div className=" max-w-120 text-white">
+                  <p className="text-amber-100 mb-4 uppercase">Our Story</p>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={Separator}
+                      alt="seprator"
+                      className=" w-30 mb-5"
+                    />
+                  </div>
+
+                  <h2 className="capitalize text-4xl">
+                    <span className=" text-white">
+                      About Us
+                    </span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
 
       {/* Who we are */}

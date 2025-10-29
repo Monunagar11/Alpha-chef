@@ -105,7 +105,7 @@ function Header() {
                   <NavLink to="/about">About us</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/">Our Chef</NavLink>
+                  <NavLink to="/ourChef">Our Chef</NavLink>
                 </li>
                 <li>
                   <NavLink to="/">Contact us</NavLink>
