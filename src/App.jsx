@@ -3,6 +3,7 @@ import AppLayout from "./components/Layout/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About/index";
 import Chef from "./pages/Chef/index";
+import ContactUs from "./pages/ContactUs/index";
 
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
     children : [
       {index: true, element: <Home />},
       {path: "/about", element: <About />},
-      {path: "/ourChef", element: <Chef />}
+      {path: "/ourChef", element: <Chef />},
+      {path: "/contactUs", element: <ContactUs />}
+
 
     ]
   }])
