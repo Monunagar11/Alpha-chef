@@ -20,6 +20,7 @@ import WhyIcon3 from "../../assets/images/resource/why-icon-3.png";
 import WhyIcon4 from "../../assets/images/resource/why-icon-4.png";
 import AboutImg1 from "../../assets/images/resource/about-image-1.jpg";
 import AboutImg2 from "../../assets/images/resource/about-image-2.jpg";
+import Slider from "../../components/UI/Slider";
 
 function index() {
   return (
@@ -355,6 +356,8 @@ function index() {
           </div>
         </div>
       </section>
+
+      <Slider />
 
       {/* Why Choose us */}
       <section className="w-full h-fit">
